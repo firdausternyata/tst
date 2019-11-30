@@ -53,8 +53,10 @@ def filter(tahun,bulan):
 	cursor = conn.cursor()
 	a = '-'
 	b = '-01'
+	c = bulan+1
 	tanggal = tahun+a+str(bulan)+b
-	cursor.execute("SELECT * FROM presensi WHERE waktu_scan<%s",(tanggal))
+	tanggal2 = tahun+a+str(c)+b
+	cursor.execute("SELECT * FROM presensi WHERE waktu_scan BETWEEN %s AND %s",(tanggal,tanggal2))
 	data = cursor.fetchall()
 	dataList = []
 	if data is not None:
