@@ -69,10 +69,9 @@ def show():
     if data is not None:
         for item in data:
             dataTempObj = {
-                'id'       : item[0],
-                'nik'      : item[1],
-                'nama'     : item[2],
-                'waktu_scan'	   : item[3]
+                'nik'      : item[0],
+                'nama'     : item[1],
+                'waktu_scan'	   : item[2]
             }
             dataList.append(dataTempObj)
         return json.dumps(dataList)
@@ -96,10 +95,9 @@ def filter(tahun,bulan):
 	if data is not None:
 		for item in data:
 			dataTempObj = {
-				'id'       : item[0],
-				'nik'      : item[1],
-				'nama'     : item[2],
-				'waktu_scan'	   : item[3]
+				'nik'      : item[0],
+				'nama'     : item[1],
+				'waktu_scan'	   : item[2]
 			}
 			dataList.append(dataTempObj)
 		return json.dumps(dataList)
